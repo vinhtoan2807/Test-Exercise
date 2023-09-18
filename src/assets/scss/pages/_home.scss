@@ -1,0 +1,49 @@
+.App{
+  .App-logo{
+   width: 100px;
+  }
+  .section-intro {
+    @include pxRem(padding-top, 60);
+  }
+  .wrapper-content {
+    .menu-list {
+      @include pxRem(padding-bottom, 60);
+      justify-content: space-around;
+    }
+    .menu-item {
+      @include pxRem(padding, 8 15 8 15);
+      @include pxRem(border-radius, 8);
+      @include pxRem(font-size, 18);
+      font-weight: map-get($font-weight, medium);
+      color: map-get($colors, text);
+      &:first-child {
+        background-color: map-get($colors, primary);
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .15);
+      }
+      &:not(:last-child) {
+        @include pxRem(margin-right, 10);
+      }
+    }
+    .content-item {
+      @include pxRem(padding, 0 15 24 15);
+      position: relative;
+    }
+    .content-img {
+      @include pxRem(height, 400);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .content-card {
+      @include pxRem(margin, 16 10);
+      @include pxRem(padding, 16);
+      @include pxRem(bottom, 24);
+      @include pxRem(border-radius, 8);
+      background-color: map-get($colors, white);
+      position: absolute;
+      width: calc(100% - 52px);
+      box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.14);
+    }
+  }
+}
